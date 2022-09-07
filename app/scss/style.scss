@@ -1,10 +1,71 @@
-// @import 'vars';
+@import 'vars';
 // @import 'fonts';
 @import 'reset';
-// @import 'global';
-// @import 'media';
+@import 'global';
 
-.container{
-  color: red;
-  text-decoration: dotted;
+.header {
+  padding: 40px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
 }
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__list-item+.menu__list-item {
+    padding-left: 35px;
+  }
+
+  &__list-link {
+    color: $title;
+    transition: all .3s;
+    padding-bottom: 2px;
+    &:hover{
+      color: $accent;
+      border-bottom: 1px solid $accent;
+    }
+  }
+
+  &__list-link--activ{
+    color: $accent;
+    border-bottom: 1px solid $accent;
+  }
+}
+
+.user-nav{
+
+  &__link{
+    position: relative;
+  }
+
+  &__link + .user-nav__link{
+    padding-left: 18px;
+  }
+
+  &__num{
+    width: 20px;
+    height: 20px;
+    background-color: $accent;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    position: absolute;
+    right: -8px;
+    top: -14px;
+    text-align: center;
+    
+  }
+}
+
+
+
+
+// @import 'media';
