@@ -1,5 +1,5 @@
 @import 'vars';
-// @import 'fonts';
+@import 'fonts';
 @import 'reset';
 @import 'global';
 
@@ -27,9 +27,11 @@
     color: $title;
     transition: all .3s;
     padding-bottom: 2px;
+    @extend %quicksand-400;
     &:hover{
       color: $accent;
       border-bottom: 1px solid $accent;
+      @extend %quicksand-500;
     }
   }
 
